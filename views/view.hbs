@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View all products</title>
+</head>
+<body>
+    <h1>View all products</h1>
+    <ul>
+        {{#each results}}
+            <li>{{name}}
+                <br>
+                <img src="{{pictureURL}}" width="150" height="100"/>
+                <br>
+                <a href="/delete?id={{_id}}" onclick="return confirm('Are you nut?')">Delete</a>
+                <br>
+                <a href="/Edit?id={{_id}}">Edit</a>
+            </li>
+        {{/each}}
+    </ul>
+    
+</body>
+</html>
